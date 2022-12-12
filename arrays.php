@@ -2,16 +2,16 @@
 
 $aanhef = array(
     "aanhef" => "Beste",
-    "persoon" => "");
+    "persoon" => "klant");
 
 $korting = array(
-    "product" => "U heeft in de voorgaande bestelling voor [[product]] gekozen",
+    "product" => str_replace("[[product]]","Chocoladereep", "U heeft in de voorgaande bestelling voor [[product]] gekozen"),
     "korting" => "Bij Uw volgende bestelling kunnen we U een korting van 10% aanbieden op hetzelfde product"
 );
 
 $ondertekening = array(
   "groet" => "Met vriendelijke groet,",
-  "naam" => "",
+  "naam" => "Shi Hua",
   "functie" => "Directeur Webshop beheer"
 );
 
@@ -20,7 +20,27 @@ $ondertekening = array(
  * Laat de inhoud van alle arrays zien
  * Gebruik daarvoor de functies var_dump() en print_r()
  */
-  
+echo "<pre>";
+ print_r($aanhef);
+ print_r($korting);
+ print_r($ondertekening);
+ echo "</pre>";
+ echo "<br>";
+ echo "<pre>";
+ var_dump($aanhef);
+ var_dump($korting);
+ var_dump($ondertekening);
+ echo "</pre>"; 
+
+
+ $aanbidingen = array_merge($aanhef, $korting, $ondertekening);
+ echo "<pre>";
+ print_r($aanbidingen);
+ echo "</pre>";
+ echo "<br>";
+ echo "<pre>";
+ var_dump($aanbidingen);
+ echo "</pre>";
 /*
  * Opdracht 2:
  * Vervang de waarde van persoon, in de array aanhef naar 'klant'
