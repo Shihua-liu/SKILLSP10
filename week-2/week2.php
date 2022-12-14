@@ -56,14 +56,21 @@ $noKeys = [];
 $omgekeerd = [];
 
 
-foreach($weekdagen as $key => $week){
-    array_push($noKeys,$week);
+// foreach($weekdagen as $key => $week){
+//     array_push($noKeys,$week);
+// }
+
+foreach($weekdagen as $dag){
+    array_push($omgekeerd, $dag);
+    
 }
 
+$omgekeerd = array_reverse($omgekeerd);
 
-for($i = count($noKeys) - 1; $i >=0; $i--){
-    array_push($omgekeerd, $noKeys[$i]);
-}
+
+// for($i = count($noKeys) - 1; $i >=0; $i--){
+//     array_push($omgekeerd, $noKeys[$i]);
+// }
 
 // array_reverse($omgekeerd);
 var_dump($omgekeerd);
